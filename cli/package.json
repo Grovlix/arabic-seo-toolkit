@@ -1,0 +1,8 @@
+{
+  "name": "arabic-seo",
+  "version": "0.1.0",
+  "private": false,
+  "bin": {
+    "arabic-seo": "./dist/arabic-seo.js"
+  }
+}

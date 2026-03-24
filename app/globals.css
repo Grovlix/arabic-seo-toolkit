@@ -1,0 +1,119 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #0b0f1a;
+  --bg-soft: #10172a;
+  --panel: rgba(16, 23, 42, 0.82);
+  --line: rgba(255, 255, 255, 0.1);
+  --text: #eef2ff;
+  --muted: #97a4c3;
+  --accent: #6366f1;
+  --accent-soft: #8b90ff;
+  --success: #34d399;
+  --warn: #f59e0b;
+  --danger: #f87171;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background:
+    radial-gradient(circle at top right, rgba(99, 102, 241, 0.25), transparent 24rem),
+    radial-gradient(circle at left center, rgba(56, 189, 248, 0.12), transparent 22rem),
+    var(--bg);
+  color: var(--text);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-cairo), sans-serif;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.shell {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.panel {
+  border: 1px solid var(--line);
+  background: var(--panel);
+  backdrop-filter: blur(20px);
+  border-radius: 28px;
+  box-shadow: 0 20px 80px rgba(0, 0, 0, 0.24);
+}
+
+.eyebrow {
+  display: inline-flex;
+  border-radius: 999px;
+  border: 1px solid rgba(139, 144, 255, 0.28);
+  padding: 0.45rem 0.8rem;
+  color: var(--accent-soft);
+  background: rgba(99, 102, 241, 0.08);
+  font-size: 0.9rem;
+}
+
+.field,
+.textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  border-radius: 18px;
+  padding: 0.95rem 1rem;
+}
+
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), #4f46e5);
+  color: white;
+  padding: 0.95rem 1.25rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.button.secondary {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--line);
+  color: var(--text);
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (max-width: 760px) {
+  .shell {
+    width: min(100% - 1rem, 1180px);
+  }
+}
+

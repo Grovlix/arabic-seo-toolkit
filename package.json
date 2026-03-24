@@ -1,0 +1,58 @@
+{
+  "name": "@grovlix/arabic-seo-toolkit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Arabic-first SEO toolkit for Salla and Zid merchants.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && npm run cli:build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run lint && npm run typecheck",
+    "cli:dev": "tsx cli/bin/arabic-seo.ts",
+    "cli:build": "tsup cli/bin/arabic-seo.ts --format esm --out-dir dist/cli/bin --clean",
+    "prepare": "node -e \"process.exit(0)\""
+  },
+  "bin": {
+    "arabic-seo": "./dist/cli/bin/arabic-seo.js"
+  },
+  "keywords": [
+    "seo",
+    "arabic",
+    "salla",
+    "zid",
+    "grovlix"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "cheerio": "^1.1.2",
+    "clsx": "^2.1.1",
+    "commander": "^14.0.1",
+    "lucide-react": "^0.542.0",
+    "next": "^15.5.2",
+    "pdfkit": "^0.17.2",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "tailwind-merge": "^3.3.1",
+    "zod": "^4.1.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.2",
+    "@types/node": "^25.5.0",
+    "@types/pdfkit": "^0.17.3",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.1",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^4.2.2",
+    "tsup": "^8.5.0",
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.3"
+  }
+}
